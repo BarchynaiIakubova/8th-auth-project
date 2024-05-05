@@ -1,0 +1,28 @@
+server:
+    port: 8080
+
+app:
+    jwt:
+        expired-at: 750
+        secret-word: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+
+spring:
+    datasource:
+        password: barchynai
+        url: jdbc:postgresql://localhost:5432/auth_project
+        username: postgres
+        hikari:
+            auto-commit: false
+    jpa:
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                format_sql: true
+                show-sql: true
+
+springdoc:
+    swagger-ui:
+        enabled: true
+        path: /swagger
